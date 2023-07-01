@@ -42,10 +42,7 @@ public class AppTest
 
     @Test
     public void calculateFrequencyFromValidList() {
-        List<String> words = new ArrayList<>();
-        words.add("abc");
-        words.add("bbc");
-        words.add("abc");
+        List<String> words = new ArrayList<>(Arrays.asList("abc", "bbc", "abc"));
         List<String> res = app.calculateWordFrequency(words);
         assertEquals("abc | 2", res.get(0));
         assertEquals("bbc | 1", res.get(1));
